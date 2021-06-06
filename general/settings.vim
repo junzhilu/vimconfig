@@ -99,6 +99,7 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 map <leader>t :TagbarToggle<CR>
 
 autocmd filetype swift nnoremap <F5> :w <bar> exec '!swift '.shellescape('%')<CR>
+autocmd filetype python nnoremap <F5> :w <bar> exec '!python '.shellescape('%')<CR>
 
 " auto-pairs
 au FileType python let b:AutoPairs = AutoPairsDefine({"f'" : "'", "r'" : "'", "b'" : "'"})
