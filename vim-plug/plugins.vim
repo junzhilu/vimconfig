@@ -10,4 +10,5 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
