@@ -36,6 +36,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set t_Co=256                            " Support 256 colors
 set iskeyword+=-                      	" treat dash separated words as a word text object
 set autochdir                           " Your working directory will always be the same as your working directory
+set updatetime=100
 
 " code folding
 set foldmethod=indent
@@ -115,5 +116,8 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-" Close current buffer
-nmap <C-w> :bd<CR>
+" Git Gutter
+let g:gitgutter_map_keys = 0
+nmap [ <Plug>(GitGutterPrevHunk)
+nmap ] <Plug>(GitGutterNextHunk)
+
