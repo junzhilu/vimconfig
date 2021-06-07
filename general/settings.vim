@@ -122,3 +122,6 @@ let g:gitgutter_map_keys = 0
 nmap [ <Plug>(GitGutterPrevHunk)
 nmap ] <Plug>(GitGutterNextHunk)
 
+" vim-fugitive
+nmap <leader>gs :G<CR>
+
