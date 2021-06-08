@@ -12,7 +12,7 @@ endif
 let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighing
-colorscheme onedark
+colorscheme gruvbox
 filetype on
 filetype plugin indent on
 

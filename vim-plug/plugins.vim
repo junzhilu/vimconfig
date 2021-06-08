@@ -3,7 +3,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sensible'
 Plug 'itchyny/lightline.vim'
 Plug 'Cokile/SwiftSyntax', { 'for': 'swift' }
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'ap/vim-buftabline'
 Plug 'airblade/vim-gitgutter'
 "Plug 'preservim/nerdtree'
