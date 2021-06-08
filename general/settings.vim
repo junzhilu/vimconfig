@@ -58,29 +58,18 @@ nmap <leader>j :wincmd j<CR>
 nmap <leader>h :wincmd h<CR>
 nmap <leader>l :wincmd l<CR>
 
-" file browser
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-"let NERDTreeMinimalUI = 1
-let g:nerdtree_open = 0
-map <leader>n :call NERDTreeToggle()<CR>
-function NERDTreeToggle()
-    NERDTreeTabsToggle
-    if g:nerdtree_open == 1
-        let g:nerdtree_open = 0
-    else
-        let g:nerdtree_open = 1
-        wincmd p
-    endif
-endfunction
+" netrw
+" Toggle Vexplore with Ctrl-E
+" Open new file vertical
+let g:netrw_browse_split = 2
+" Default width 25%
+let g:netrw_winsize = 25
 
-function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
-autocmd VimEnter * call StartUp()
+map <leader>e :Lexplore<CR>
 
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+" auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+au! BufWritePost $MYVIMRC source %      
 
 " You can't stop me
 cmap w!! w !sudo tee %
@@ -98,7 +87,7 @@ endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " tags
-"map <leader>t :TagbarToggle<CR>
+map <leader>t :TagbarToggle<CR>
 
 autocmd filetype swift nnoremap <F5> :w <bar> exec '!swift '.shellescape('%')<CR>
 autocmd filetype python nnoremap <F5> :w <bar> exec '!python '.shellescape('%')<CR>
@@ -138,4 +127,11 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+
+" Maximizer
+nnoremap <leader>m :MaximizerToggle<CR>
+vnoremap <leader>m :MaximizerToggle<CR>gv
+inoremap <leader>m <C-o>:MaximizerToggle<CR>
+
+map <C-w> <ESC>:bd<CR>
 
