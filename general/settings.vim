@@ -16,6 +16,7 @@ colorscheme onedark
 filetype on
 filetype plugin indent on
 
+set cmdheight=1
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
 set fileformat=unix
@@ -31,6 +32,7 @@ set colorcolumn=120
 set nowrap                              " Display long lines as just one line
 
 set splitright                          " Vertical splits will automatically be to the right
+set splitbelow
 set conceallevel=0                      " So that I can see `` in markdown files
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set t_Co=256                            " Support 256 colors
@@ -96,7 +98,7 @@ endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " tags
-map <leader>t :TagbarToggle<CR>
+"map <leader>t :TagbarToggle<CR>
 
 autocmd filetype swift nnoremap <F5> :w <bar> exec '!swift '.shellescape('%')<CR>
 autocmd filetype python nnoremap <F5> :w <bar> exec '!python '.shellescape('%')<CR>
