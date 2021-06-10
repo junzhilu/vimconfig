@@ -1,6 +1,5 @@
 {
-        "languageserver": {},
-        "http.proxyStrictSSL": false,
-        "http.proxy": "ex-proxy.com:80",
-        "https.rejectUnauthorized": false
+  "languageserver": {},
+  "http.proxyStrictSSL": false,
+  "https.rejectUnauthorized": false
 }
