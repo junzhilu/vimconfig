@@ -135,3 +135,16 @@ inoremap <leader>m <C-o>:MaximizerToggle<CR>
 
 map <C-w> <ESC>:bd<CR>
 
+"auto black @AL by Jonathan
+autocmd BufWritePre package.py let b:runBlack=0
+fun! BlackityBlack()
+    if exists('b:runBlack')
+        return
+    endif
+    execute ':Black'
+endfun
+let g:black_fast = 1
+au BufEnter * let g:black_linelength=88
+au BufEnter Filament/**/*.py let g:black_linelength=110
+au BufEnter filament/**/*.py let g:black_linelength=110
+autocmd BufWritePre *.py call BlackityBlack()
