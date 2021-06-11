@@ -64,6 +64,7 @@ nmap <leader>l :wincmd l<CR>
 let g:netrw_browse_split = 2
 " Default width 25%
 let g:netrw_winsize = 25
+let g:netrw_list_hide=".*\.pyc$"
 
 map <leader>e :Lexplore<CR>
 
