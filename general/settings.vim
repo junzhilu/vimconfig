@@ -43,6 +43,11 @@ set updatetime=100
 " code folding
 set foldmethod=indent
 set foldlevel=99
+set foldnestmax=10
+
+" save vim views
+au BufWinLeave *.* mkview
+au BufWinEnter *.* silent loadview
 
 " restore place in file from previous session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -61,7 +66,7 @@ nmap <leader>l :wincmd l<CR>
 " netrw
 " Toggle Vexplore with Ctrl-E
 " Open new file vertical
-let g:netrw_browse_split = 2
+let g:netrw_browse_split = 0
 " Default width 25%
 let g:netrw_winsize = 25
 let g:netrw_list_hide=".*\.pyc$"
