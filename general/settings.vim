@@ -109,6 +109,9 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+" Code foldering
+set foldmethod=indent
+
 " Git Gutter
 let g:gitgutter_map_keys = 0
 nmap [ <Plug>(GitGutterPrevHunk)
