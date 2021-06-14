@@ -137,12 +137,16 @@ let g:lightline = {
       \ },
       \ }
 
+map <C-w> <ESC>:bd<CR>
+
 " Maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
 vnoremap <leader>m :MaximizerToggle<CR>gv
 inoremap <leader>m <C-o>:MaximizerToggle<CR>
 
-map <C-w> <ESC>:bd<CR>
+nnoremap <leader>- :vertical resize -5<CR>
+nnoremap <leader>= :vertical resize +5<CR>
+
 
 "auto black @AL by Jonathan
 autocmd BufWritePre package.py let b:runBlack=0
