@@ -16,6 +16,7 @@ colorscheme gruvbox
 filetype on
 filetype plugin indent on
 
+set noswapfile
 set cmdheight=1
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
