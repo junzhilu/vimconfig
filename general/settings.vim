@@ -144,8 +144,8 @@ map <M-l> <ESC>:vertical sbfirst<CR>
 
 " Maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
-vnoremap <leader>m :MaximizerToggle<CR>gv
-inoremap <leader>m <C-o>:MaximizerToggle<CR>
+" vnoremap <leader>m :MaximizerToggle<CR>gv
+" inoremap <leader>m <C-o>:MaximizerToggle<CR>
 
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>= :vertical resize +5<CR>
