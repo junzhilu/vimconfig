@@ -139,7 +139,7 @@ let g:lightline = {
       \ },
       \ }
 
-map <C-w> <ESC>:bd<CR>
+map <M-w> <ESC>:bd<CR>
 
 " Maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
