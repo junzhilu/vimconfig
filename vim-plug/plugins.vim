@@ -2,7 +2,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sensible'
 Plug 'itchyny/lightline.vim'
-Plug 'Cokile/SwiftSyntax', { 'for': 'swift' }
 Plug 'psf/black'
 Plug 'morhetz/gruvbox'
 Plug 'ap/vim-buftabline'
