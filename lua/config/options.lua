@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.go.background = "light"
+vim.g.root_spec = { "cwd" }
