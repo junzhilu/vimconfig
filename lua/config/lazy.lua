@@ -51,3 +51,15 @@ require("lazy").setup({
     },
   },
 })
+
+return require("lspconfig").pylsp.setup({
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          maxLineLength = 110,
+        },
+      },
+    },
+  },
+})
