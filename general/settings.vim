@@ -114,9 +114,6 @@ let g:gitgutter_map_keys = 0
 nmap [ <Plug>(GitGutterPrevHunk)
 nmap ] <Plug>(GitGutterNextHunk)
 
-" vim-fugitive
-"nmap <leader>gs :G<CR>
-
 "lightline
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -145,6 +142,9 @@ nnoremap <leader>e :Neotree toggle reveal_force_cwd<CR>
 
 " Lazygit
 nnoremap <silent> <leader>gg :LazyGit<CR>
+
+" Quit all
+nnoremap <silent> <leader>qq :wqa<CR>
 
 "auto black @AL by Jonathan
 autocmd BufWritePre package.py let b:runBlack=0
