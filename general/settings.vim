@@ -12,7 +12,7 @@ endif
 let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighing
-colorscheme gruvbox
+colorscheme tokyonight-night
 filetype on
 filetype plugin indent on
 
@@ -65,16 +65,6 @@ nmap <leader>j :wincmd j<CR>
 nmap <leader>h :wincmd h<CR>
 nmap <leader>l :wincmd l<CR>
 
-" netrw
-" Toggle Vexplore with Ctrl-E
-" Open new file vertical
-let g:netrw_browse_split = 0
-" Default width 25%
-let g:netrw_winsize = 25
-let g:netrw_list_hide=".*\.pyc$"
-
-map <leader>e :Lexplore<CR>
-
 
 " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 au! BufWritePost $MYVIMRC source %      
@@ -125,7 +115,7 @@ nmap [ <Plug>(GitGutterPrevHunk)
 nmap ] <Plug>(GitGutterNextHunk)
 
 " vim-fugitive
-nmap <leader>gs :G<CR>
+"nmap <leader>gs :G<CR>
 
 "lightline
 let g:lightline = {
@@ -150,6 +140,11 @@ nnoremap <leader>m :MaximizerToggle<CR>
 nnoremap <leader>- :vertical resize -5<CR>
 nnoremap <leader>= :vertical resize +5<CR>
 
+" Neotree
+nnoremap <leader>e :Neotree toggle reveal_force_cwd<CR>
+
+" Lazygit
+nnoremap <silent> <leader>gg :LazyGit<CR>
 
 "auto black @AL by Jonathan
 autocmd BufWritePre package.py let b:runBlack=0
@@ -160,7 +155,7 @@ fun! BlackityBlack()
     execute ':Black'
 endfun
 let g:black_fast = 1
-au BufEnter * let g:black_linelength=88
+au BufEnter * let g:black_linelength=110
 au BufEnter Filament/**/*.py let g:black_linelength=110
 au BufEnter filament/**/*.py let g:black_linelength=110
 autocmd BufWritePre *.py call BlackityBlack()
